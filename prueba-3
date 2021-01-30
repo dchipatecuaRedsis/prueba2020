@@ -1,0 +1,13 @@
+import requests
+import json
+request= requests.get('https://securetransfer.redsis.com/rest/forms/v1/teamGoAny/payload')
+data = {
+   "nombre" : "Santiago",
+   "apellido" : "Casallas"}
+response= requests.post('https://securetransfer.redsis.com/rest/forms/v1/teamGoAny/payload/'
+    + request.json()['data']['payloadId']+
+    '/submit',data=json.dumps(data))
+response= requests.get('https://securetransfer.redsis.com/rest/forms/v1/teamGoAny/payload/'
+    + request.json()['data']['payloadId']+
+    '/submit',data=json.dumps(data))
+print (response.text)
