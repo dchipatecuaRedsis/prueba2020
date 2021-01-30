@@ -1,0 +1,22 @@
+def convertString(a):
+    if a== '0': return 'S'
+    if a== '1': return 'U'
+    if a== '2': return 'T'
+    if a== '3': return 'P'
+    if a== '4': return 'A'
+    if a== '5': return 'G'
+    if a== '6': return 'M'
+    if a== '7': return 'E'
+    if a== '8': return 'L'
+    if a== '9': return 'C'
+
+n = str(input())
+if len (n)== 10:
+    res=''
+    for i in n:
+        res=res+convertString(i)  
+    print (res)
+else:
+    print('numero debe tener exactamente 10 digitos')    
+
+
