@@ -1,0 +1,25 @@
+
+public class TripletaPitagorica {
+  
+    public static void main(String[] args) {
+        
+        for (int a = 1; a <= 1000; a++) //asigno a=1 y empieza a aumentar su valor de a uno hasta un valor igual o menor a 1000
+        {
+            for (int b = a + 1; b < 1000; b++) //asigno b=a+1 y empieza a aumentar su valor de a uno hasta un valor menor a 1000
+            {
+                
+                double c2 = Math.pow(a, 2) + Math.pow(b, 2);//a^2 + b^2 = c^2 elevo al cuadrado a y b para hallar c al cuadrado
+                double c = Math.pow(c2, 0.5);//Hallo la base elevando a la 1/2 el resultado anterior y el valor lo guardo en c
+
+                if (a + b + c == 1000) //Si a+b+c=1000 entonces imprima a,b,c y el producto de estas tres variables
+                {
+                	System.out.println("a="+a);//Imprimo a
+                	System.out.println("b="+b);//Imprimo b
+                	System.out.println("c="+c);//Imprimo c
+                    System.out.println("a*b*c="+a * b * c);//Imprimo a*b*c
+
+                }
+            }
+        }
+    }
+}
