@@ -1,0 +1,57 @@
+import javax.swing.*;
+ 
+public class NumerosLetras {
+ 
+	public static void main(String[] args) {
+ //Declaro variables
+		char letra;
+		String Entrada,Salida="";
+ 
+		Entrada=JOptionPane.showInputDialog("Introduce un número de 10 cifras:");//Creo la ventana para que el usuario ingrese el número
+		
+ while (Entrada.length()!=10) {Entrada=JOptionPane.showInputDialog("Cantidad incorrecta de cifras, Introduce un número de 10 cifras:");}//En caso de que se ingrese mal el número aparece un aviso
+ 
+ //ciclo for para recorrer el número ingresado de uno en uno y asignarle la correspondiente letra a cada cifra
+		for (int i = 0; i < Entrada.length(); i++) {
+			letra = Entrada.charAt(i);
+ 
+			//Condición if para asignación de letra a cada cifra del número de 10 cifras
+			if (letra=='0') {
+				letra = 'S';
+			}		
+			if (letra=='1') {
+				letra = 'U';
+			}
+			if (letra=='2') {
+				letra = 'T';
+			}
+			if (letra=='3') {
+				letra = 'P';
+			}
+			if (letra=='4') {
+				letra = 'A';
+			}
+			if (letra=='5') {
+				letra = 'G';
+			}
+			if (letra=='6') {
+				letra = 'M';
+			}
+			if (letra=='7') {
+				letra = 'E';
+			}
+			if (letra=='8') {
+				letra = 'L';
+			}
+			if (letra=='9') {
+				letra = 'C';
+			}
+			else {
+				Salida = Salida+letra;//Cargo el número de 10 cifras en su equivalencia en letras
+			}
+		}
+	System.out.println(Salida);//Imprimo el resultado final
+	
+	}
+	
+}
